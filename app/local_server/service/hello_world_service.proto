@@ -1,0 +1,14 @@
+syntax = "proto3";
+
+option java_package = "com.google.startuposexample.app.localserver.service";
+option java_outer_classname = "Protos";
+
+package com.google.startuposexample.app.localserver.service;
+
+service HelloWorldService {
+  rpc helloWorld(HelloWorldRequest) returns (HelloWorldResponse);
+}
+
+message HelloWorldRequest { string message = 1; }
+
+message HelloWorldResponse { string message = 1; }
