@@ -1,0 +1,68 @@
+# Based on config from github.com/alexeagle/angular-bazel-example
+version: 2
+
+# We use a docker image as the basis for our build, so that all the toolchains we use
+# are already installed and the build can start running right away. It also guarantees
+# the environment is portable and reproducible on your local machine.
+var_1: &docker_image angular/ngcontainer:0.3.3
+
+
+# Each job will inherit these defaults
+anchor_1: &job_defaults
+  working_directory: ~/ng
+  docker:
+    - image: *docker_image
+
+# After checkout, rebase on top of master, because we want to test the proposed merge of a
+# onto the target branch, not just test what's on the user's fork.
+# Similar to travis behavior, but not quite the same.
+# See https://discuss.circleci.com/t/1662
+anchor_2: &post_checkout
+  post: git pull --ff-only origin "refs/pull/${CI_PULL_REQUEST//*pull\//}/merge"
+
+
+# These jobs will run in parallel, and report separate statuses to GitHub PRs
+jobs:
+  lint:
+    <<: *job_defaults
+    steps:
+      - checkout:
+          <<: *post_checkout
+      - restore_cache:
+          key: "v1-bazel_cache"
+          key: dep-check-{{ checksum "dependencies.yaml" }}
+      - run: './check_dependencies.sh'
+      - run: './fix_formatting.sh'
+      - save_cache:
+          key: dep-check-{{ checksum "dependencies.yaml" }}
+          paths:
+            - "/home/circleci/bazel_deps_cache/"
+
+  build:
+    <<: *job_defaults
+    steps:
+      - checkout:
+          <<: *post_checkout
+
+      - restore_cache:
+          key: "v1-bazel_cache"
+
+      - run: sudo cp .circleci/bazel.rc /etc/bazel.bazelrc
+      - run: bazel info release
+      - run:
+          command: ./compile.sh build
+
+      - save_cache:
+          key: "v1-bazel_cache"
+          paths:
+            - "/home/circleci/.cache/bazel/"
+
+
+workflows:
+  version: 2
+  default_workflow:
+    jobs:
+      - lint
+      - build:
+          requires:
+            - lint
