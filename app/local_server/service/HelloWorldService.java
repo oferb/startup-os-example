@@ -1,10 +1,10 @@
 package com.google.startuposexample.app.localserver.service;
 
-import javax.inject.Inject;
-import javax.inject.Singleton;
-import io.grpc.stub.StreamObserver;
 import com.google.startuposexample.app.localserver.service.Protos.HelloWorldRequest;
 import com.google.startuposexample.app.localserver.service.Protos.HelloWorldResponse;
+import io.grpc.stub.StreamObserver;
+import javax.inject.Inject;
+import javax.inject.Singleton;
 
 @Singleton
 public class HelloWorldService extends HelloWorldServiceGrpc.HelloWorldServiceImplBase {
@@ -15,8 +15,10 @@ public class HelloWorldService extends HelloWorldServiceGrpc.HelloWorldServiceIm
   @Override
   public void helloWorld(
       HelloWorldRequest req, StreamObserver<HelloWorldResponse> responseObserver) {
-    responseObserver.onNext(HelloWorldResponse.newBuilder().setMessage("World").build());
+    responseObserver.onNext(
+        HelloWorldResponse.newBuilder()
+            .setMessage(String.format("Hello, %s", req.getMessage()))
+            .build());
     responseObserver.onCompleted();
   }
 }
-

@@ -1,7 +1,7 @@
 java_library(
     name = "dagger",
     exports = [
-        "//external:jar/com/google/dagger/dagger"
+        "//external:jar/mvncom/google/dagger/dagger"
     ],
     licenses = [
         "permissive"
@@ -19,7 +19,7 @@ java_library(
 java_library(
     name = "dagger_compiler",
     exports = [
-        "//external:jar/com/google/dagger/dagger_compiler"
+        "//external:jar/mvncom/google/dagger/dagger_compiler"
     ],
     licenses = [
         "permissive"
@@ -44,7 +44,7 @@ java_library(
 java_library(
     name = "dagger_producers",
     exports = [
-        "//external:jar/com/google/dagger/dagger_producers"
+        "//external:jar/mvncom/google/dagger/dagger_producers"
     ],
     licenses = [
         "permissive"
@@ -62,7 +62,7 @@ java_library(
 java_library(
     name = "dagger_spi",
     exports = [
-        "//external:jar/com/google/dagger/dagger_spi"
+        "//external:jar/mvncom/google/dagger/dagger_spi"
     ],
     licenses = [
         "permissive"

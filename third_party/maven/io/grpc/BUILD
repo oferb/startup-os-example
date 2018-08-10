@@ -1,7 +1,7 @@
 java_library(
     name = "grpc_context",
     exports = [
-        "//external:jar/io/grpc/grpc_context"
+        "//external:jar/mvnio/grpc/grpc_context"
     ],
     licenses = [
         "permissive"
@@ -16,7 +16,7 @@ java_library(
 java_library(
     name = "grpc_core",
     exports = [
-        "//external:jar/io/grpc/grpc_core"
+        "//external:jar/mvnio/grpc/grpc_core"
     ],
     licenses = [
         "permissive"
@@ -40,7 +40,7 @@ java_library(
 java_library(
     name = "grpc_netty",
     exports = [
-        "//external:jar/io/grpc/grpc_netty"
+        "//external:jar/mvnio/grpc/grpc_netty"
     ],
     licenses = [
         "permissive"
@@ -60,7 +60,7 @@ java_library(
 java_library(
     name = "grpc_protobuf",
     exports = [
-        "//external:jar/io/grpc/grpc_protobuf"
+        "//external:jar/mvnio/grpc/grpc_protobuf"
     ],
     licenses = [
         "permissive"
@@ -83,7 +83,7 @@ java_library(
 java_library(
     name = "grpc_protobuf_lite",
     exports = [
-        "//external:jar/io/grpc/grpc_protobuf_lite"
+        "//external:jar/mvnio/grpc/grpc_protobuf_lite"
     ],
     licenses = [
         "permissive"
@@ -98,7 +98,7 @@ java_library(
 java_library(
     name = "grpc_services",
     exports = [
-        "//external:jar/io/grpc/grpc_services"
+        "//external:jar/mvnio/grpc/grpc_services"
     ],
     licenses = [
         "permissive"
@@ -118,7 +118,7 @@ java_library(
 java_library(
     name = "grpc_stub",
     exports = [
-        "//external:jar/io/grpc/grpc_stub"
+        "//external:jar/mvnio/grpc/grpc_stub"
     ],
     licenses = [
         "permissive"

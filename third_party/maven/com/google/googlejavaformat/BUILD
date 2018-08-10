@@ -1,7 +1,7 @@
 java_library(
     name = "google_java_format",
     exports = [
-        "//external:jar/com/google/googlejavaformat/google_java_format"
+        "//external:jar/mvncom/google/googlejavaformat/google_java_format"
     ],
     licenses = [
         "permissive"

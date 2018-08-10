@@ -1,7 +1,7 @@
 java_library(
     name = "javax_annotation_api",
     exports = [
-        "//external:jar/javax/annotation/javax_annotation_api"
+        "//external:jar/mvnjavax/annotation/javax_annotation_api"
     ],
     licenses = [
         "permissive"
@@ -16,7 +16,7 @@ java_library(
 java_library(
     name = "jsr250_api",
     exports = [
-        "//external:jar/javax/annotation/jsr250_api"
+        "//external:jar/mvnjavax/annotation/jsr250_api"
     ],
     licenses = [
         "permissive"

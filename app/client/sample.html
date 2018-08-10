@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Example</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <script type="text/javascript" src="app.js"></script>
+  </head>
+  <body>
+    <div class="container jumbotron">
+    <div>
+      <div class="form-group">
+        <label for="request-message">Request for <code>com.google.startuposexample.app.localserver.service.HelloWorldService/helloWorld</code></label>
+        <input class="form-control" id="request-message" placeholder="Request message">
+      </div>
+      <button onclick="hello()" class="btn btn-primary">Submit</button>
+    <div class="form-group">
+      <label for="">Response: </label>
+      <input class="form-control" readonly id="response-message" placeholder="Response message">
+    </div>
+    </div>
+  </body>
+</html>
