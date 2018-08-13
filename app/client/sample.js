@@ -10,9 +10,10 @@ var HelloWorldServiceClient = goog.require('proto.com.google.startuposexample.ap
 const hello = function () {
   var client =  new HelloWorldServiceClient('http://localhost:8080', null, null);
   var request = new HelloWorldRequest();
-  request.setMessage(document.getElementById("request-message").value);
-  client.helloWorld(request, {}, function(code, message) {
-    document.getElementById("response-message").value = message.getMessage();
+  var metadata = {};
+  request.setMessage(document.getElementById('request-message')['value']);
+  client.helloWorld(request, metadata, function(code, message) {
+    document.getElementById('response-message')['value'] = message.getMessage();
   });
 };
 

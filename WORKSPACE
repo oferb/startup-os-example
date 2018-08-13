@@ -30,11 +30,11 @@ http_archive(
     urls = ["https://github.com/google/startup-os/archive/bb205ed849a51122cc09c663e2bab153e4319d60.tar.gz"],
 )
 
-# FIXME: replace with oferb/startupos_binaries
+
 http_archive(
     name = "startupos_binaries",
-    strip_prefix = "startupos-binaries-43cd46a490095173c627351e85236f4295e75a8e",
-    urls = ["https://github.com/vmax/startupos-binaries/archive/43cd46a490095173c627351e85236f4295e75a8e.tar.gz"],
+    strip_prefix = "startupos-binaries-76819481d60ad379ea1b4890998cd3bb4554e20c",
+    urls = ["https://github.com/oferb/startupos-binaries/archive/76819481d60ad379ea1b4890998cd3bb4554e20c.tar.gz"],
 )
 
 

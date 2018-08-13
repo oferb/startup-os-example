@@ -15,10 +15,12 @@ closure_proto_library(
   deps = ["//app/local_server/service:hello_world_service_proto"]
 )
 
+
+# see https://github.com/grpc/grpc-web#wire-format-mode
 closure_grpc_web_library(
   name = "hello_world_service_grpc",
   deps = ["//app/local_server/service:hello_world_service_proto"],
-  mode = "grpcweb"
+  mode = "grpcweb" # (grpcweb|grpcwebtext)
 )
 
 
@@ -27,7 +29,6 @@ closure_js_library(
   srcs = ["sample.js"],
   deps = [":hello_world_service_grpc",
           ":hello_world_service_closure_proto"],
-  suppress = ["strictMissingProperties", "reportUnknownTypes"]
 )
 
 
