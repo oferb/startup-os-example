@@ -16,11 +16,11 @@ closure_proto_library(
 )
 
 
-# see https://github.com/grpc/grpc-web#wire-format-mode
 closure_grpc_web_library(
   name = "hello_world_service_grpc",
   deps = ["//app/local_server/service:hello_world_service_proto"],
-  mode = "grpcweb" # (grpcweb|grpcwebtext)
+  mode = "grpcweb" # mode can be grpcweb or grpcwebtext. For more details,
+                   # see https://github.com/grpc/grpc-web#wire-format-mode
 )
 
 
