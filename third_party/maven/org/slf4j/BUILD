@@ -1,7 +1,7 @@
 java_library(
     name = "slf4j_api",
     exports = [
-        "//external:jar/org/slf4j/slf4j_api"
+        "//external:jar/mvnorg/slf4j/slf4j_api"
     ],
     licenses = [
         "permissive"
@@ -16,7 +16,7 @@ java_library(
 java_library(
     name = "slf4j_simple",
     exports = [
-        "//external:jar/org/slf4j/slf4j_simple"
+        "//external:jar/mvnorg/slf4j/slf4j_simple"
     ],
     licenses = [
         "permissive"

@@ -1,7 +1,7 @@
 java_library(
     name = "flogger",
     exports = [
-        "//external:jar/com/google/flogger/flogger"
+        "//external:jar/mvncom/google/flogger/flogger"
     ],
     licenses = [
         "permissive"
@@ -19,7 +19,7 @@ java_library(
 java_library(
     name = "flogger_system_backend",
     exports = [
-        "//external:jar/com/google/flogger/flogger_system_backend"
+        "//external:jar/mvncom/google/flogger/flogger_system_backend"
     ],
     licenses = [
         "permissive"

@@ -1,7 +1,7 @@
 java_library(
     name = "netty_buffer",
     exports = [
-        "//external:jar/io/netty/netty_buffer"
+        "//external:jar/mvnio/netty/netty_buffer"
     ],
     licenses = [
         "permissive"
@@ -19,7 +19,7 @@ java_library(
 java_library(
     name = "netty_codec",
     exports = [
-        "//external:jar/io/netty/netty_codec"
+        "//external:jar/mvnio/netty/netty_codec"
     ],
     licenses = [
         "permissive"
@@ -34,7 +34,7 @@ java_library(
 java_library(
     name = "netty_codec_http",
     exports = [
-        "//external:jar/io/netty/netty_codec_http"
+        "//external:jar/mvnio/netty/netty_codec_http"
     ],
     licenses = [
         "permissive"
@@ -52,7 +52,7 @@ java_library(
 java_library(
     name = "netty_codec_http2",
     exports = [
-        "//external:jar/io/netty/netty_codec_http2"
+        "//external:jar/mvnio/netty/netty_codec_http2"
     ],
     licenses = [
         "permissive"
@@ -71,7 +71,7 @@ java_library(
 java_library(
     name = "netty_codec_socks",
     exports = [
-        "//external:jar/io/netty/netty_codec_socks"
+        "//external:jar/mvnio/netty/netty_codec_socks"
     ],
     licenses = [
         "permissive"
@@ -86,7 +86,7 @@ java_library(
 java_library(
     name = "netty_common",
     exports = [
-        "//external:jar/io/netty/netty_common"
+        "//external:jar/mvnio/netty/netty_common"
     ],
     licenses = [
         "permissive"
@@ -101,7 +101,7 @@ java_library(
 java_library(
     name = "netty_handler",
     exports = [
-        "//external:jar/io/netty/netty_handler"
+        "//external:jar/mvnio/netty/netty_handler"
     ],
     licenses = [
         "permissive"
@@ -119,7 +119,7 @@ java_library(
 java_library(
     name = "netty_handler_proxy",
     exports = [
-        "//external:jar/io/netty/netty_handler_proxy"
+        "//external:jar/mvnio/netty/netty_handler_proxy"
     ],
     licenses = [
         "permissive"
@@ -138,7 +138,7 @@ java_library(
 java_library(
     name = "netty_resolver",
     exports = [
-        "//external:jar/io/netty/netty_resolver"
+        "//external:jar/mvnio/netty/netty_resolver"
     ],
     licenses = [
         "permissive"
@@ -153,7 +153,7 @@ java_library(
 java_library(
     name = "netty_transport",
     exports = [
-        "//external:jar/io/netty/netty_transport"
+        "//external:jar/mvnio/netty/netty_transport"
     ],
     licenses = [
         "permissive"

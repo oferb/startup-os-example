@@ -1,7 +1,7 @@
 java_library(
     name = "protobuf_java",
     exports = [
-        "//external:jar/com/google/protobuf/protobuf_java"
+        "//external:jar/mvncom/google/protobuf/protobuf_java"
     ],
     licenses = [
         "permissive"
@@ -16,7 +16,7 @@ java_library(
 java_library(
     name = "protobuf_java_util",
     exports = [
-        "//external:jar/com/google/protobuf/protobuf_java_util"
+        "//external:jar/mvncom/google/protobuf/protobuf_java_util"
     ],
     licenses = [
         "permissive"

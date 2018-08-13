@@ -25,22 +25,47 @@ container_pull(
 
 http_archive(
     name = "startupos",
-    sha256 = "65f8330b73174467f1d2d311c17941be1e03b338c674484a2980f8be959ef3ce",
-    strip_prefix = "startup-os-861b56c09a9bacb0190e0c372956c6b9da132e7f",
-    urls = ["https://github.com/google/startup-os/archive/861b56c09a9bacb0190e0c372956c6b9da132e7f.tar.gz"],
+    sha256 = "abb9cef989265622273d504376a17d7f7ba4f89afd26405ac61e251248efc588",
+    strip_prefix = "startup-os-bb205ed849a51122cc09c663e2bab153e4319d60",
+    urls = ["https://github.com/google/startup-os/archive/bb205ed849a51122cc09c663e2bab153e4319d60.tar.gz"],
 )
 
 
 http_archive(
     name = "startupos_binaries",
-    sha256 = "0708b7b7f8ead7544bd9b03383a9829b33e6c7ce3661a316d328c57037ca7261",
-    strip_prefix = "startupos-binaries-3eaa31c93ca9ecb22ad8c348649d1ba4f61f332c",
-    urls = ["https://github.com/oferb/startupos-binaries/archive/3eaa31c93ca9ecb22ad8c348649d1ba4f61f332c.tar.gz"],
+    strip_prefix = "startupos-binaries-76819481d60ad379ea1b4890998cd3bb4554e20c",
+    urls = ["https://github.com/oferb/startupos-binaries/archive/76819481d60ad379ea1b4890998cd3bb4554e20c.tar.gz"],
 )
 
 
 load("//third_party/maven:workspace.bzl", "maven_dependencies")
 maven_dependencies()
+
+
+# FIXME: update to use official repository.
+# when https://github.com/bazelbuild/rules_closure/pull/278
+# is merged
+
+http_archive(
+    name = "io_bazel_rules_closure",
+    strip_prefix = "rules_closure-16e0cded9bc10285aed33e274313c352ab377a9e",
+    sha256 = "50a7e13d7daeeb11ae4420fc79934dc6d5b54d7ceedfef510299cc1ace7c2667",
+    urls = [
+          "https://github.com/Yannic/rules_closure/archive/16e0cded9bc10285aed33e274313c352ab377a9e.zip",
+    ],
+)
+
+load("@io_bazel_rules_closure//closure:defs.bzl", "closure_repositories")
+closure_repositories()
+
+http_archive(
+    name = "com_github_grpc_grpc_web",
+    strip_prefix = "grpc-web-6da369d5837d2ae53d78a89ab259ba072d7ce372",
+    sha256 = "aa1b09c007ce708d54fa6a0637d0e6eaef56c653b83656fffe55a3dbc166229b",
+    urls = [
+        "https://github.com/grpc/grpc-web/archive/6da369d5837d2ae53d78a89ab259ba072d7ce372.zip",
+    ],
+)
 
 
 http_file(

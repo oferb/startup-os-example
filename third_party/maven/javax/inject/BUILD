@@ -1,7 +1,7 @@
 java_library(
     name = "javax_inject",
     exports = [
-        "//external:jar/javax/inject/javax_inject"
+        "//external:jar/mvnjavax/inject/javax_inject"
     ],
     licenses = [
         "permissive"

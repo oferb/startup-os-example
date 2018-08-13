@@ -1,7 +1,7 @@
 java_library(
     name = "junit",
     exports = [
-        "//external:jar/junit/junit"
+        "//external:jar/mvnjunit/junit"
     ],
     licenses = [
         "permissive"

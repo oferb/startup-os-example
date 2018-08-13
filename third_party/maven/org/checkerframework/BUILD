@@ -1,7 +1,7 @@
 java_library(
     name = "checker_compat_qual",
     exports = [
-        "//external:jar/org/checkerframework/checker_compat_qual"
+        "//external:jar/mvnorg/checkerframework/checker_compat_qual"
     ],
     licenses = [
         "permissive"
@@ -16,7 +16,7 @@ java_library(
 java_library(
     name = "checker_qual",
     exports = [
-        "//external:jar/org/checkerframework/checker_qual"
+        "//external:jar/mvnorg/checkerframework/checker_qual"
     ],
     licenses = [
         "permissive"

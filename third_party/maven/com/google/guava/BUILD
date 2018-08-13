@@ -1,7 +1,7 @@
 java_library(
     name = "guava",
     exports = [
-        "//external:jar/com/google/guava/guava"
+        "//external:jar/mvncom/google/guava/guava"
     ],
     licenses = [
         "permissive"
