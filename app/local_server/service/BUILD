@@ -30,6 +30,6 @@ java_library(
         ":hello_world_service_java_proto",
         "//third_party/maven/io/grpc:grpc_core",
         "//third_party/maven/io/grpc:grpc_stub",
-        "//third_party/maven/javax/inject:javax_inject"
+        "//third_party/maven/javax/inject:javax_inject",
     ],
 )

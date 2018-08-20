@@ -16,22 +16,21 @@ else
 fi
 
 echo "Building prerequisites: local_server, grpc web proxy, service js binary"
-bazel build //app/local_server:local_server \
+bazel build //app/local_server:local_server_deploy.jar \
             @startupos_binaries//:grpcwebproxy \
             //app/client:hello_world_service_js_binary
 
 echo "Copying js binary"
 rm -f app/client/app.js
-cp bazel-bin/app/client/hello_world_service_js_binary.js app/client/app.js
-
+cp "bazel-bin/app/client/hello_world_service_js_binary.js" "app/client/app.js"
 
 echo "Running local_server"
-bazel run //app/local_server:local_server &
+java -jar "bazel-bin/app/local_server/local_server_deploy.jar" &
 
 echo "Opening browser"
-$RUNNER $html_file
+$RUNNER "$html_file"
 
 echo "Running grpc web proxy"
 bazel run @startupos_binaries//:grpcwebproxy -- \
-    --backend_addr=localhost:8001 \
+    --backend_addr="localhost:8001" \
     --run_tls_server=false
